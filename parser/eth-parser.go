@@ -140,15 +140,6 @@ func (ep *EthParser) ParseBlock(blockNumber int) {
 	ep.mu.Unlock()
 }
 
-// func (ep *EthParser) StartParsing() {
-// 	for {
-// 		ep.fetchCurrentBlock()
-// 		currentBlock := ep.GetCurrentBlock()
-// 		ep.parseBlock(currentBlock)
-// 		time.Sleep(10 * time.Second)
-// 	}
-// }
-
 func init() {
 	err := godotenv.Load()
 	if err != nil {
